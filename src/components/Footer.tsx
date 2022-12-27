@@ -8,6 +8,11 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
+import {
+  HiOutlineLocationMarker,
+  HiOutlineMail,
+  HiOutlinePhone,
+} from "react-icons/hi";
 import styled from "styled-components";
 
 const Footer = () => {
@@ -19,12 +24,24 @@ const Footer = () => {
         <div className="sch">
           <img src="/assets/logo.svg" alt="" />
           <p>Leo'z Kiddie Hub School</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            fugiat perspiciatis quod omnis voluptas pariatur impedit deleniti
-            necessitatibus, provident non natus, beatae vitae magni harum esse
-            sapiente minima molestias corporis!
-          </p>
+          <div className="contactInfo">
+            <div>
+              <Button type="primary" icon={<HiOutlinePhone />} shape="circle" />
+              <span>+233 (0) 246756070</span>
+            </div>
+            <div>
+              <Button
+                type="primary"
+                icon={<HiOutlineLocationMarker />}
+                shape="circle"
+              />
+              <span>Nsenie, Near Nsenie Pharmacy</span>
+            </div>
+            <div>
+              <Button type="primary" icon={<HiOutlineMail />} shape="circle" />
+              <span>leoz@gmail.com</span>
+            </div>
+          </div>
           <div className="socialLinks">
             <Button type="primary" icon={<FaFacebookF />} />
             <Button type="primary" icon={<FaLinkedinIn />} />
@@ -36,7 +53,6 @@ const Footer = () => {
           <MapPicker
             defaultLocation={DefaultLocation}
             zoom={18}
-            // mapTypeId="roadmap"
             style={{ height: "400px" }}
             apiKey="AIzaSyD07E1VvpsN_0FvsmKAj4nK9GnLq-9jtj8"
           />
@@ -96,6 +112,19 @@ const Wrapper = styled.div`
 
   & .sch p {
     line-height: 1.5rem;
+  }
+
+  & .contactInfo div {
+    margin: 1rem 0;
+  }
+
+  & .contactInfo span {
+    margin-left: 10px;
+  }
+
+  & .contactInfo button {
+    background: #535f85;
+    color: #fff;
   }
 
   & .socialLinks button {

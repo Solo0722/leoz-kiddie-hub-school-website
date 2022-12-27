@@ -9,11 +9,19 @@ const Banner = () => {
     <BannerWrapper>
       <ContactWrapper>
         <div>
-          <StyledIconButton icon={<HiOutlinePhone />} shape="circle" />
-          &nbsp;+233 (0) 246756070 / +233 (0) 208467112
+          <StyledIconButton
+            href="tel:+233246756070"
+            icon={<HiOutlinePhone />}
+            shape="circle"
+          />
+          &nbsp;+233 (0) 246756070
         </div>
         <div>
-          <StyledIconButton icon={<HiOutlineMail />} shape="circle" />
+          <StyledIconButton
+            href="mailto:leozkiddiehub@gmail.com"
+            icon={<HiOutlineMail />}
+            shape="circle"
+          />
           &nbsp;leozkiddiehub@gmail.com
         </div>
       </ContactWrapper>
